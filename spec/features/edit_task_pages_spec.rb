@@ -5,7 +5,7 @@ describe "the edit a task process" do
     list = List.create(:name => 'Home stuff')
     task = Task.create(:description => 'Wash the dishes', :list_id => list.id)
     visit list_path(list)
-    click_on 'Edit'
+    click_on 'Edit Task'
     fill_in 'Description', :with => 'Wash the dog'
     click_on 'Update Task'
     expect(page).to have_content 'Wash the dog'
@@ -15,7 +15,7 @@ describe "the edit a task process" do
     list = List.create(:name => 'Home stuff')
     task = Task.create(:description => 'Wash the dishes', :list_id => list.id)
     visit list_path(list)
-    click_on 'Edit'
+    click_on 'Edit Task'
     fill_in 'Description', :with => ''
     click_button 'Update Task'
     expect(page).to have_content 'errors'
