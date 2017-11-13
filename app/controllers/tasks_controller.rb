@@ -8,6 +8,7 @@ class TasksController < ApplicationController
     @list = List.find(params[:list_id])
     @task = @list.tasks.new(task_params)
     if @task.save
+      flash[:notice] = "Task successfully added!"
       redirect_to list_path(@task.list)
     else
       render :new
@@ -24,6 +25,7 @@ class TasksController < ApplicationController
     @list = List.find(params[:list_id])
     @task = @list.tasks.find(params[:id])
     if @task.update(task_params)
+      flash[:notice] = "Task successfully updated!!"
       redirect_to list_path(@task.list)
     else
       render :edit
@@ -34,6 +36,7 @@ class TasksController < ApplicationController
     @list = List.find(params[:list_id])
     @task = @list.tasks.find(params[:id])
     @task.destroy
+    flash[:notice] = "Your task has been deleted."
     redirect_to list_path(@task.list)
   end
 
