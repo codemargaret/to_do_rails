@@ -1,3 +1,5 @@
+<% content_for(:title, "List | To Do") %>
+
 <%= render('layouts/errors', :object => @task) %>
 
 <%= form_for [@list, @task] do |f| %>
