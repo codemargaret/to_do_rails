@@ -1,24 +1,49 @@
-# README
+# Rails To-Do
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### _An app that allows a user to create to-do lists, 11.12.2017_
 
-Things you may want to cover:
+#### By _**Margaret Berry**_
 
-* Ruby version
+## Project Goals
+* Get comfortable with Rails.
+* Use ActiveRecord with Rails.
+* Implement a one-to-many relationship
+* Have CRUD functionality for all models.
+* Use flash messages.
 
-* System dependencies
+## User Stories
+* As a user, I want to:
+  - Create a new list
+  - Edit a list
+  - Delete a list
+  - Add tasks to the list
+  - Edit a task
+  - Delete a task
 
-* Configuration
+## Setup/Installation Requirements
+_Run the following commands in Terminal:_
 
-* Database creation
+1. `$ git clone` [this repository](https://github.com/codemargaret/to_do_rails.git)
+2. `$ cd to_do_rails`
+3. `$ bundle install`
+4. `$ rake db:create`
+5. `$ rake db:test:prepare`
+6. `$ rake db:migrate`
+7. `$ rake db:seed`
+8. `$ rails s`
+9. _Navigate to localhost:3000/lists_
 
-* Database initialization
+## Known Bugs
+_There are no known bugs at this time._
 
-* How to run the test suite
+## Support and contact details
+_If you have issues, questions, ideas, or concerns, please contact [Margaret](codeberry1@gmail.com). Feel free to make a contribution to the code._
 
-* Services (job queues, cache servers, search engines, etc.)
+## Technologies Used
+* _Ruby-on-Rails_
+* _ActiveRecord_
 
-* Deployment instructions
+### License
+*This software is licensed under the MIT license.*
 
-* ...
+Copyright (c) 2017 **_Margaret Berry_**
